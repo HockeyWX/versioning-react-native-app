@@ -34,7 +34,6 @@ subprojects {
 }
 
 def getNpmVersion() {
-    commandLine 'cd ../ && ls'
     def inputFile = new File("../package.json")
     def packageJson = new JsonSlurper().parseText(inputFile.text)
     return packageJson["version"]
